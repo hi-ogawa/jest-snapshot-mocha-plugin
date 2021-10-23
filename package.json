@@ -1,0 +1,26 @@
+{
+  "name": "@hiogawa/jest-snapshot-mocha-plugin",
+  "version": "1.0.0-alpha.2",
+  "homepage": "https://github.com/hi-ogawa/jest-snapshot-mocha-plugin",
+  "scripts": {
+    "tsc": "tsc",
+    "test": "NODE_ENV=test mocha",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "clean": "rm -rf build",
+    "clean:snapshot": "find . -type d -name __snapshots__ | xargs rm -rf",
+    "package": "rm -rf build/package && mkdir -p build/package && cp build/tsc/src/* package.json README.md build/package",
+    "deploy": "npm run clean && npm run tsc && npm run package && npm publish ./build/package --access public"
+  },
+  "devDependencies": {
+    "@types/mocha": "^9.0.0",
+    "@types/node": "^16.11.0",
+    "mocha": "^9.1.3",
+    "prettier": "^2.4.1",
+    "source-map-support": "^0.5.20",
+    "typescript": "^4.4.4"
+  },
+  "peerDependencies": {
+    "jest-snapshot": "^27.3.1"
+  }
+}

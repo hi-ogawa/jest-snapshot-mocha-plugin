@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ex00 integer 1`] = `1`;
+
+exports[`ex00 integer 2`] = `2`;
+
+exports[`ex00 integer 3`] = `3`;
+
+exports[`ex00 object 1`] = `
+Object {
+  "x": 1,
+  "y": 2,
+  "z": 3,
+}
+`;
+
+exports[`ex00 object 2`] = `
+Object {
+  "x": 1,
+  "y": 2,
+  "z": Object {
+    "u": 3,
+    "v": 4,
+  },
+}
+`;
