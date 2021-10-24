@@ -1,0 +1,32 @@
+
+
+  test-integration-ex00
+    1) case1
+
+
+  0 passing (10ms)
+  1 failing
+
+  1) test-integration-ex00
+       case1:
+
+      Snapshot not match (test/__snapshots__/ex00.snap)
+[32m+ actual[39m [31m- expected[39m,,[32m+[39m 'Object {\n  "x": 1,\n  "y": 2,\n  "z": Object {\n    "u": 5,\n    "w": 4,\n  },\n}',[31m-[39m 'Object {\n  "x": 1,\n  "y": 2,\n  "z": Object {\n    "u": 3,\n    "w": 4,\n  },\n}'
+      + expected - actual
+
+       Object {
+         "x": 1,
+         "y": 2,
+         "z": Object {
+      -    "u": 5,
+      +    "u": 3,
+           "w": 4,
+         },
+       }
+      
+  AssertionError [ERR_ASSERTION]: 'Object {\n  "x": 1,\n  "y": 2,\n  "z": Object {\n    "u": 5,\n    "w": 4,\n  },\n}' matchSnapshot 'Object {\n  "x": 1,\n  "y": 2,\n  "z": Object {\n    "u": 3,\n    "w": 4,\n  },\n}'
+      at Context.<anonymous> (test/ex00.js:5:5)
+      at processImmediate (node:internal/timers:464:21)
+
+
+
