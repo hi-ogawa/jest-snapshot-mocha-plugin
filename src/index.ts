@@ -1,6 +1,7 @@
 import * as assert from "assert";
 import type { Context } from "mocha";
-import { SnapshotState, SnapshotStateType } from "jest-snapshot";
+import { SnapshotState } from "jest-snapshot";
+import type { SnapshotStateType } from "jest-snapshot";
 import type {
   SnapshotStateOptions,
   SnapshotMatchOptions,
