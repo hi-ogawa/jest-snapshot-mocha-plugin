@@ -25,7 +25,7 @@
        }
       
   AssertionError [ERR_ASSERTION]: 'Object {\n  "x": 1,\n  "y": 2,\n  "z": Object {\n    "u": 5,\n    "w": 4,\n  },\n}' matchSnapshot 'Object {\n  "x": 1,\n  "y": 2,\n  "z": Object {\n    "u": 3,\n    "w": 4,\n  },\n}'
-      at Context.<anonymous> (test/ex00.js:5:5)
+      at Context.<anonymous> (test/ex00.js:6:5)
       at processImmediate (node:internal/timers:464:21)
 
 

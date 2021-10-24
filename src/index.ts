@@ -18,7 +18,7 @@ export type ResolveSnapshotPath = (
 
 export interface PluginConfig {
   updateSnapshot: boolean;
-  resolveSnapshotPath: (testPath: string, snapshotExt: string) => string;
+  resolveSnapshotPath?: ResolveSnapshotPath;
 }
 
 export interface PluginState {

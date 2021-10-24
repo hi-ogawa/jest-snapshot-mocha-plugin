@@ -1,3 +1,6 @@
+//
+// 'register' script for custom configuration
+//
 import { JestSnapshotMochaPlugin } from "../src";
 import * as path from "path";
 import * as process from "process";
