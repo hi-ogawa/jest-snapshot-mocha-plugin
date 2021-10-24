@@ -1,0 +1,18 @@
+
+
+  test-integration-ex00
+    1) case1
+
+
+  0 passing (9ms)
+  1 failing
+
+  1) test-integration-ex00
+       case1:
+     Snapshot not found (test/__snapshots__/ex00.snap)
+  AssertionError [ERR_ASSERTION]: 'Object {\n  "x": 1,\n  "y": 2,\n  "z": Object {\n    "u": 3,\n    "w": 4,\n  },\n}' matchSnapshot undefined
+      at Context.<anonymous> (test/ex00.js:5:5)
+      at processImmediate (node:internal/timers:464:21)
+
+
+

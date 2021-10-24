@@ -1,0 +1,8 @@
+
+
+  test-integration-ex00
+    ✔ case1
+
+
+  1 passing (8ms)
+

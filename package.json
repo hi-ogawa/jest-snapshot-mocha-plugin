@@ -4,7 +4,10 @@
   "homepage": "https://github.com/hi-ogawa/jest-snapshot-mocha-plugin",
   "scripts": {
     "tsc": "tsc",
-    "test": "NODE_ENV=test mocha",
+    "test": "mocha",
+    "test:update": "UPDATE_SNAPSHOT=1 mocha",
+    "test:integration": "cd test-integration && make test",
+    "test:integration:update": "cd test-integration && make test-update-logs",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "clean": "rm -rf build",
