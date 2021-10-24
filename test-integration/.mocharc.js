@@ -1,5 +1,5 @@
 module.exports = {
   spec: "test/**/*.js",
-  require: ["./register-snapshot-plugin"],
+  require: ["../build/tsc/src/register"],
   exit: true,
 };

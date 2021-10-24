@@ -1,4 +1,5 @@
 const { describe, it } = require("mocha");
+const { matchSnapshot } = require("../../build/tsc/src/register");
 
 describe("test-integration-ex00", () => {
   it("case1", () => {
