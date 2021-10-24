@@ -145,7 +145,7 @@ function defaultResolveSnapshotPath(
   testPath: string,
   snapshotExt: string
 ): string {
-  const testDirname = path.dirname(testPath);
+  const testDirname = path.dirname(path.relative(".", testPath));
   const testFileNoExt = path
     .basename(testPath)
     .split(".")
