@@ -4,14 +4,14 @@
     1) case1
 
 
-  0 passing (10ms)
+  0 passing (12ms)
   1 failing
 
   1) test-integration-ex00
        case1:
 
       Snapshot not match (test/__snapshots__/ex00.snap)
-[32m+ actual[39m [31m- expected[39m,,[32m+[39m 'Object {\n  "x": 1,\n  "y": 2,\n  "z": Object {\n    "u": 5,\n    "w": 4,\n  },\n}',[31m-[39m 'Object {\n  "x": 1,\n  "y": 2,\n  "z": Object {\n    "u": 3,\n    "w": 4,\n  },\n}'
++ actual - expected,,+ 'Object {\n  "x": 1,\n  "y": 2,\n  "z": Object {\n    "u": 5,\n    "w": 4,\n  },\n}',- 'Object {\n  "x": 1,\n  "y": 2,\n  "z": Object {\n    "u": 3,\n    "w": 4,\n  },\n}'
       + expected - actual
 
        Object {
