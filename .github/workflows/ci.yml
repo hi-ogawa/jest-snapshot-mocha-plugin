@@ -23,3 +23,9 @@ jobs:
       - run: npm run tsc
       - run: npm run test
       - run: npm run test:integration
+
+  check-package-lock:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+      - run: diff <(grep -P '^  "version":' package.json) <(grep -P '^  "version":' package-lock.json)
