@@ -28,5 +28,9 @@
   },
   "dependencies": {
     "jest-snapshot": "*"
+  },
+  "volta": {
+    "node": "16.11.1",
+    "npm": "8.1.0"
   }
 }
