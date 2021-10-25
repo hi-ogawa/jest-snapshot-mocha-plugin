@@ -27,6 +27,11 @@ export interface PluginState {
   snapshotState: SnapshotStateType;
 }
 
+export interface BeforeEachOptions {
+  filename: string;
+  title: string;
+}
+
 export class SnapshotError extends assert.AssertionError {
   constructor(
     result: ReturnType<SnapshotStateType["match"]>,
@@ -92,21 +97,8 @@ export class JestSnapshotMochaPlugin {
     throw new SnapshotError(result, snapshotPath, this.matchSnapshot);
   };
 
-  beforeEach(context: Context): void {
-    const test = context.currentTest;
-    if (!test) {
-      log("no context.currentTest");
-      return;
-    }
-
-    const file = test.file;
-    if (!file) {
-      log("no context.currentTest.file");
-      return;
-    }
-
-    const title = test.fullTitle();
-    const snapshotPath = this.resolveSnapshotPath(file, SNAPSHOT_EXTENSION);
+  beforeEach({ filename, title }: BeforeEachOptions): void {
+    const snapshotPath = this.resolveSnapshotPath(filename, SNAPSHOT_EXTENSION);
     const snapshotOptions: SnapshotStateOptions = {
       updateSnapshot: this.config.updateSnapshot ? "all" : "none",
       // Other flags have been changing between versions,
@@ -125,7 +117,6 @@ export class JestSnapshotMochaPlugin {
     const { snapshotState } = this.state;
     this.state = undefined;
 
-    // TODO: Does it partially update (e.g. when grepping with -g)?
     snapshotState.save();
   }
 
@@ -133,7 +124,21 @@ export class JestSnapshotMochaPlugin {
     const self = this;
     return {
       beforeEach: function (this: Context) {
-        self.beforeEach(this);
+        const context = this;
+        const test = context.currentTest;
+        if (!test) {
+          log("no context.currentTest");
+          return;
+        }
+
+        const filename = test.file;
+        if (!filename) {
+          log("no context.currentTest.file");
+          return;
+        }
+
+        const title = test.fullTitle();
+        self.beforeEach({ filename, title });
       },
       afterEach: function (this: Context) {
         self.afterEach();
