@@ -1,6 +1,6 @@
 {
   "name": "@hiogawa/jest-snapshot-mocha-plugin",
-  "version": "1.0.0-alpha.6",
+  "version": "1.0.0-alpha.7",
   "homepage": "https://github.com/hi-ogawa/jest-snapshot-mocha-plugin",
   "scripts": {
     "tsc": "tsc",
